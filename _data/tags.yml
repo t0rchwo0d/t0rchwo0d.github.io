@@ -1,11 +1,11 @@
-tag1:
+LIFE:
   name: tag1
 
-tag2:
+CTF:
   name: tag2
 
-tag3:
+DEV:
   name: tag3
 
-tag4:
+HACK:
   name: tag4
