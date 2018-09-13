@@ -1,11 +1,11 @@
 LIFE:
-  name: tag1
+  name: Wargame
 
 CTF:
-  name: tag2
+  name: CTF
 
 DEV:
-  name: tag3
+  name: Research
 
 HACK:
-  name: tag4
+  name: Other
