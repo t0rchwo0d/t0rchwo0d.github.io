@@ -4,15 +4,16 @@ layout: default
 
 # $ cat about_me.txt
 {:id="about"}
-
 #### Introduce
 - I'm pentester working in security consulting company.
 
+#### History
+- 2013
 
 # $ cat contact.txt
 {:id="contact"}
-
-awdr1624@gmail.com
+#### E-mail
+- awdr1624@gmail.com
 
 # $ cat team.txt
 {:id="team"}
