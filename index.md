@@ -2,12 +2,12 @@
 layout: default
 ---
 
-# $ cat about.txt
+# $ cat about_me.txt
 {:id="about"}
 
+#### Introduce
+- I'm pentester working in security consulting company.
 
-
-The categories to post was to support us, but you can change as you need.
 
 # $ cat contact.txt
 {:id="contact"}
