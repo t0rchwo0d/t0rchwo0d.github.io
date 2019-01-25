@@ -1,10 +1,10 @@
 # Site specific settings
-title: "Title to this website"
-name: "Website name"
-keywords: "Key, words, about, this, website"
-baseurl: "/darcli"
-url: "http://website.com"
-description: "Website description"
+title: "t0rchwo0d labs"
+name: "t0rchwo0d labs"
+keywords: "Hack, Web, Pwn, Reversing, Programming"
+baseurl: "/"
+url: "https://t0rchwo0d.github.io/"
+description: "t0rchwo0d labs"
 cover: "/assets/img/cover.svg"
 fanpage_id: ""
 
