@@ -1,17 +1,22 @@
 ---
 layout: post
-title: Título do post
-date: 2016-04-30 01:00:00
+title: Pin & Pintool 01
+date: 2019-03-02 17:00:00
 categories: posts
 en: false
 comments: true
-description: descrição do post para SEO
-keywords: "palavras, chaves, desse, post, para, SEO"
+description: Dynamic Binary Instrumentation Framework
+keywords: "dbi, pin, pintool"
 authors:
-    - author1
-    - author2
+    - t0rchwo0d
 ---
 
-Exemplo de post, digamos que seria uma tradução para outra língua. Então, basta marcar a variável `en` como `false` que o post não será listado novamente na `index.html`.
+##### 1. [PIN&PINTOOL](https://software.intel.com/en-us/articles/pin-a-dynamic-binary-instrumentation-tool)  Overview
 
-No mais, basta deixar as variáveis como estão ou ir testando, está tudo bem intuitivo.
+- Intel에서 제작한 Dynamic Binary Instrumentation Framework
+- C++을 이용
+- PINTOOL은 PIN SDK(Software Development Kit)를 이용하여 만든 Library
+- PIN.exe 자체가 에뮬레이터 또는 런처로 바이너리(실행 파일)을 인자로 받는 형태로 동작
+
+![img](https://rayanfam.com/wp-content/uploads/sites/2/2018/01/pin-overview-1024x727.jpg)
+
