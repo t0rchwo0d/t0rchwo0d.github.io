@@ -5,6 +5,6 @@ main:
   - title: "About"
     url: "/_about"
   - title: "Posts"
-    url: "/_posts"
+    url: "/posts-archive/"
   - title: "Archive"
     url: "/_Archive/"
