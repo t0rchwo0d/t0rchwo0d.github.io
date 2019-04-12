@@ -1,7 +1,14 @@
 ---
-layout: post
 title:  "Writeup - VolgaCTF 2019 Qualifier"
+categories:
+  - CTF Writeup
+tags:
+  - volgaCTF
+  - CTF
+  - WEB
+  - JAVA
 ---
+
 # 게시글 작성 테스트
 
 # Web_Shop
