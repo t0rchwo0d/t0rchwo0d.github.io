@@ -1,9 +1,8 @@
 ---
 title:  "Writeup - VolgaCTF 2019 Qualifier"
 categories:
-  - CTF Writeup
+  - writeup
 tags:
-  - volgaCTF
   - CTF
   - WEB
   - JAVA
