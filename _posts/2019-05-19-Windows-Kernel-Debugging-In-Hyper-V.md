@@ -101,7 +101,7 @@ tags:
   - Host에서 WinDbg를 실행하여 "File > Ketnel Debugging > Net"에 대상 PC의 포트 번호와 KEY 값을 삽입하고 확인또는 아래와  또는, Host에서 다음 커맨드와 함께 WinDbg 실행
     ```powershell
     C:\Windows\system32>cd C:\Program Files (x86)\Windows Kits\10\Debuggers\x64
-    WinDbg –k net:port=50010,key=2steg4fzbj2sz.23418vzkd4ko3.1g34ou07z4pev.1sp3yo9yz874p
+    WinDbg –k net:port=50010,key=????
     ```
     
   - Host PC에서 디버깅 대기 상태에서 Hyper-V 관리자에서 Guest 실행
