@@ -14,6 +14,7 @@ tags:
 윈도우 상에서 프로그램을 리버싱하는 과정에서 드라이버(.SYS) 모듈이 로드되어 동작하는 경우가 존재한다. 특히 해당 모듈이 중요한 로직을 동작하거나 실행하는 경우 분석이 필요한데 Windows Pro 버전 이상에서 제공하는 Hyper-V 기능을 이용하여 디버깅이 가능하다.
 
 
+
 ## 0x01_Hyper-V Setup
 
 - 관리자 권한으로 "PowerShell"을 실행하여 Hyper-V 사용하도록 설정 후, 재부팅
@@ -26,7 +27,7 @@ tags:
   - 2세대로 설치하는 경우 COM  포트를 지원하지 않으므로 네트워크 디버깅으로 진행
     - 윈도우 8 이상부터는 bcdedit 에서 dbgsetting 명령에서 net을 제공
     - 이하 버전에서는 WinDbg 폴더 내에 kdnet.exe 프로그램을 이용
-  
+
 - Host 설정 메뉴 접근
   - "가상 스위치 관리자 > 새 가상 네트워크 스위치 > 외부" 메뉴에서 가상 스위치 생성
   - "Hyper-V 설정 > 실제 GPU > GPU 선택 > RemoteFX 설정"
@@ -44,26 +45,25 @@ tags:
   - USB 외장 하드 추가
     - "하드웨어 > SCSI 컨트롤러 > 실제 하드 디스크(Y)"에서 해당 메뉴 선택
     - 운영체제 실행 중에 가능
-  
+
 - 가상 머신을 실행 후, 설치 완료
 
 - 사운드의 경우 RDP를 통해 출력하도록 설정하므로 PRO 이상의 윈도우 OS가 필요
   - [WIN]+[R]에서 mstsc 실행 후, "로컬 리소스 > 설정 > 이 컴퓨터에서 재생(P) > 확인"
   - RDP 접근 후, 아래의 사운드 아이콘을 클릭하면 "원격 오디오"로 활성화 된 것을 확인
-  
+
 - 타 PC에서 Guest OS RDP 접근 시, RDP 지원 프로토콜로 인하여 Hyper-V가 설치되있어야 한다. 
+
 
 
 ## 0x02_Windows Setup
 
 - Host 설정
-
   - Power Shell에서 "이더넷 어댑터 vEthernet (기본 스위치)"와 인터넷과 연결된 NIC IP를 확인
-
     ```powershell
     ipconfig /all
     ```
-    
+
   - "제어판 > 시스템 및 보안 > Windows Defender 방화벽 > 허용되는 앱 > 다른 앱 허용(R)"에 접근하여 WinDbg 허용
   
   - WinDbg 설정 ([MS Home](<https://docs.microsoft.com/ko-kr/windows-hardware/drivers/devtest/bcdedit--dbgsettings>))
@@ -71,7 +71,7 @@ tags:
       ```powershell
       SRV*c:\symbols*http://msdl.microsoft.com/download/symbols
       ```
-  
+
 - Guest 설정
   - 관리자 권한의 CMD에서 다음 과정 진행
     ```powershell
@@ -96,7 +96,7 @@ tags:
     # 재부팅
     C:\Windows\system32>shutdown -r -t 0
     ```
-  
+
 - 커널 디버깅 진행
   - Host에서 WinDbg를 실행하여 "File > Ketnel Debugging > Net"에 대상 PC의 포트 번호와 KEY 값을 삽입하고 확인또는 아래와  또는, Host에서 다음 커맨드와 함께 WinDbg 실행
     ```powershell
@@ -119,6 +119,7 @@ tags:
     # 디버깅 해제
     C:\Windows\system32>bcdedit /debug off
     ```
+
 
 
 ## 0x03_Debugging
@@ -146,5 +147,3 @@ tags:
   ```powershell
   bcdedit -set testsigning off
   ```
-
-
