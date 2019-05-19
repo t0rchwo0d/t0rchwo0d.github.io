@@ -1,7 +1,7 @@
 ---
 title: "About"
 permalink: /_about/
-layout: posts
+layout: archive
 author_profile: true
 ---
 ## 0x00_t0rchwo0d
