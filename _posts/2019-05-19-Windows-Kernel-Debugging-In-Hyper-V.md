@@ -1,7 +1,7 @@
 ---
 title:  "Windows - Kernel Debugging In Hyper-V"
 categories:
-  - Windows
+  - WINDOWS
 tags:
   - SYS
   - DRIVER
