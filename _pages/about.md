@@ -1,8 +1,8 @@
 ---
-permalink: /_about/
 title: "About"
-excerpt: "About t0rchwo0d"
-toc: true
+permalink: /_about/
+layout: posts
+author_profile: true
 ---
 ## 0x00_t0rchwo0d
 ###  Interests
