@@ -10,7 +10,7 @@ tags:
 ---
 # WinDbg Extensions
 ## 0x00_Description
-윈도우 Debugger인 WinDbg의 확장 모듈들에 대한 정리로 [여기를 참조](https://github.com/bruce30262/TWindbg)하여 쓸만한 모듈들에 대한 설정 및 기본 활용 방법을 명세하였다.
+윈도우 Debugger인 WinDbg의 확장 모듈들에 대한 정리로 [여기를 참조](https://github.com/anhkgg/awesome-windbg-extensions)하여 쓸만한 모듈들에 대한 설정 및 기본 활용 방법을 명세하였다.
 
 ## 0x01_WinDbg Preview
 윈도우 10에서 사용가능한 WinDbg Preview 버전의 경우 32, 64 Binary에 따라 자동으로 실행되는 바이너리가 변경되므로 32, 64를 동시에 사용하기 위해서는 확장 모듈의 이름을 32, 64로 구분을 지어서 적용해야 한다. 이를 위한 [환경 변수](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/loading-debugger-extension-dlls)가 존재하며 **_NT_DEBUGGER_EXTENSION_PATH** 환경 변수에 원하는 모듈의 경로를 설정하여 WinDbg 커맨드에서 다음 명령을 통해 로드할 수 있다.
