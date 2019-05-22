@@ -38,7 +38,7 @@ tags:
   
   - whl 파일을 pip로 설치
   
-    - windbg_x86 또는 windbg_64에 따라 다른 버전으로 빌드해야하며 python 버전 또한 아키텍쳐에 맞게 되어야한다.
+    - windbg_x86 또는 windbg_64에 따라 해당하는 파일로 빌드해야하며 python 버전 또한 아키텍쳐에 맞게 사용해야 한다.
     
   - [WIN]+[X]를 통해 관리자 권한으로 파워쉘 실행 후 진행
   
@@ -63,7 +63,7 @@ tags:
 
   - pykd가 설치된 상태에서 압축 해제된 "TWindbg"폴더를 "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\winext\\" 복사
 
-  - 실행 파일 오픈 후, Command 창 에서 아래 명령을 통해 적용
+  - 실행 파일 오픈 후, Command 창 에서 아래 명령을 통해 테스트
 
     ```powershell
     .load pykd.pyd
