@@ -32,10 +32,10 @@ tags:
   - "가상 스위치 관리자 > 새 가상 네트워크 스위치 > 외부" 메뉴에서 가상 스위치 생성
   - "Hyper-V 설정 > 실제 GPU > GPU 선택 > RemoteFX 설정"
     - 3D GPU 장치를 가상화 OS에서 동작하도록 설정
-    - 현재 윈도우에서 더 이상 RemoteFX를 지원하지 않아 추가되지 않는 경우 관리자 권한으로 아래의 명령을 통해 강제로 RemoteFX를 추가 할 수 있다.
-    ```powershell
-    Add-VMRemoteFx3dVideoAdapter -VMName [MyVM]
-    ```
+    - 현재 윈도우에서 더 이상 RemoteFX를 지원하지 않아 추가되지 않는 경우 관리자 권한으로 아래의 명령을 통해 강제로 RemoteFX Adapter를 추가 할 수 있다.
+      ```powershell
+      Add-VMRemoteFx3dVideoAdapter -VMName [MyVM]
+      ```
   - USB  외장 하드 인식
     - 윈도우 제어판의 "관리 도구 > 컴퓨터 관리 > 저장소 > 디스크 관리"에 접근
     - 해당 USB 외장 하드의 상태를 "온라인 > 오프라인"으로 변경
