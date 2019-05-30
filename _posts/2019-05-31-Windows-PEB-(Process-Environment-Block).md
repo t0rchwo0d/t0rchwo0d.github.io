@@ -130,7 +130,7 @@ ntdll!_PEB
 
 
 ## 0x02_PEB.Ldr->_PEB_LDR_DATA (x86 기준)
-다른 변수들의 경우 이름으로 사용되는 역할을 파악할 수 있으나 Ldr (Loader)의 경우 명확하게 파악이되지 않으니 좀더 살펴보았다. Ldr은 PEB_LDR_DATA 구조체(Structure)의 주소 값을 가지고 있으며 이 구조체는 로드된 Module에 대한 정보를 제공한다.
+다른 변수들의 경우 이름으로 사용되는 역할을 파악할 수 있으나 Ldr (Loader)의 경우 명확하게 파악이되지 않으니 좀 더 살펴보았다. Ldr은 PEB_LDR_DATA 구조체(Structure)의 주소 값을 가지고 있으며 이 구조체는 로드된 Module에 대한 정보를 제공한다.
 
 [이 곳](http://undocumented.ntinternals.net/index.html?page=UserMode%2FStructures%2FPEB_LDR_DATA.html)에서 PEB_LDR_DATA 구조체를 확인 할 수 있으며 다음과 같다.
 
@@ -246,7 +246,7 @@ KERNELBASE!KernelBaseDllInitialize:
 7683839f e8ea000000      call    KERNELBASE!KernelBaseBaseDllInitialize (7683848e)
 ```
 
-이 과정을 알고 있다면 리버싱 과정에서 DLL과 호출되는 API 함수들의 주소를 획득할 수 있을 것이다. 이 부분은 좀더 공부 후 직접 코드를 작성 후에 포스팅할 예정이다.
+이 과정을 알고 있다면 리버싱 과정에서 DLL과 호출되는 API 함수들의 주소를 획득할 수 있을 것이다. 이 부분은 좀 더 공부 후 직접 코드를 작성 후에 포스팅할 예정이다.
 
 
 
