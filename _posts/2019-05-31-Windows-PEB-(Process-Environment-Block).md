@@ -63,7 +63,9 @@ ntdll!_PEB
 
 
 x86 Architecture에서는 FS Register가 TEB의 구조체 주소(x64에서는 GS Register)를 가지고 있으며 해당 위치에서 Offset을 더하여 원하는 구조체 필드의 값을 가져올 수 있다. 
+
 **x86 Architecture**
+
 ```assembly
 FS:[0x00] : 현재 SEH 프레임 (예외 처리를 위한 SEH Handler의 시작 주소)
 FS:[0x18] : TEB
