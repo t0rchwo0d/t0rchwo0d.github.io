@@ -30,6 +30,7 @@ tags:
 
 - Host 설정 메뉴 접근
   - "가상 스위치 관리자 > 새 가상 네트워크 스위치 > 외부" 메뉴에서 가상 스위치 생성
+    - NIC가 둘 이상인 경우 외부에 연결된 NIC로 선택
   - "Hyper-V 설정 > 실제 GPU > GPU 선택 > RemoteFX 설정"
     - 3D GPU 장치를 가상화 OS에서 동작하도록 설정
   - USB  외장 하드 인식
@@ -41,13 +42,17 @@ tags:
   - "하드웨어 > 하드웨어 추가 > RemoteFX 3D 비디오 어댑터 > 추가" 및 설정
     - Windows 7 Enterprise 또는 Ultimate 이상에서 가능 (Windows 10 Pro 추천)
     - RemoteFX를 설정할 경우 RDP를 이용하여 접근해야 하므로 Guest IP를 확인
+    - 현재 윈도우에서 더 이상 RemoteFX를 지원하지 않아 추가되지 않는 경우 관리자 권한으로 아래의 명령을 통해 강제로 RemoteFX Adapter를 추가 할 수 있다.
+      ```powershell
+      Add-VMRemoteFx3dVideoAdapter -VMName [MyVM]
+      ```
   - 메모리 및 프로세서 설정
   - USB 외장 하드 추가
     - "하드웨어 > SCSI 컨트롤러 > 실제 하드 디스크(Y)"에서 해당 메뉴 선택
     - 운영체제 실행 중에 가능
 
 - 가상 머신을 실행 후, 설치 완료
-
+- RemoteFX 적용을 확인하기 위해 [WIN]+[R]의 실행 창에서 dxdiag를 입력하여 DirectX 진단 도구의 디스플레이 항목에서 DirectX 기능의 가속이 모두 사용으로 설정된것을 
 - 사운드의 경우 RDP를 통해 출력하도록 설정하므로 PRO 이상의 윈도우 OS가 필요
   - [WIN]+[R]에서 mstsc 실행 후, "로컬 리소스 > 설정 > 이 컴퓨터에서 재생(P) > 확인"
   - RDP 접근 후, 아래의 사운드 아이콘을 클릭하면 "원격 오디오"로 활성화 된 것을 확인
