@@ -66,24 +66,24 @@ x86 Architecture에서는 FS Register가 TEB의 구조체 주소(x64에서는 GS
 
 **x86 Architecture**
 
-```pseudocode
-FS:[0x00] : 현재 SEH 프레임 (예외 처리를 위한 SEH Handler의 시작 주소)
-FS:[0x18] : TEB
-FS:[0x20] : PID
-FS:[0x24] : TID
-FS:[0x30] : PEB
-FS:[0x34] : Last Error Value
+```c++
+FS:[0x00] // 현재 SEH 프레임 (예외 처리를 위한 SEH Handler의 시작 주소)
+FS:[0x18] // TEB
+FS:[0x20] // PID
+FS:[0x24] // TID
+FS:[0x30] // PEB
+FS:[0x34] // Last Error Value
 ```
 
 **x64 Architecture**
 
-```pseudocode
-FS:[0x00] : 현재 SEH 프레임 (예외 처리를 위한 SEH Handler의 시작 주소)
-FS:[0x18] : TEB
-FS:[0x20] : PID
-FS:[0x24] : TID
-FS:[0x30] : PEB
-FS:[0x34] : Last Error Value
+```c++
+FS:[0x00] // 현재 SEH 프레임 (예외 처리를 위한 SEH Handler의 시작 주소)
+FS:[0x18] // TEB
+FS:[0x20] // PID
+FS:[0x24] // TID
+FS:[0x30] // PEB
+FS:[0x34] // Last Error Value
 ```
 
 
@@ -91,21 +91,21 @@ FS:[0x34] : Last Error Value
 다음은 IsDebuggerPresent() 로직의 ASM 코드이다. 이와 같이 FS Register를 사용하는 이유는 PEB를 직점 참조 할 수 없기 때문이다. 즉, FS에서 TEB의 주소를 획득하고 해당 주소에서 Offset 30에 PEB가 존재하는 값을 가져오는 것이다. 
 
 x64에서는 GS Register 기준으로 GS:[30]에 TEB가 존재하며 Offset 60에 PEB가 있다.
-```pseudocode
-# x86, FS:[30] == PEBBaseAddress == TEB.ProcessEnvironmentBlock
+```c++
+// x86, FS:[30] == PEBBaseAddress == TEB.ProcessEnvironmentBlock
 mov eax, DWORD PTR FS:[18]
 mov eax, DWORD PTR DS:[EAX+30]
-# or
+// or
 mov eax, DWORD PTR FS:[30]
 
-# x64, GS:[60] == PEBBaseAddress == TEB.ProcessEnvironmentBlock
+// x64, GS:[60] == PEBBaseAddress == TEB.ProcessEnvironmentBlock
 mov rax, QWORD PTR GS:[30]
 mov rax, QWORD PTR DS:[RAX+60]
-# or
+// or
 mov rax, DWORD PTR GS:[60]
 
 
-# x86, IsDebuggerPresent()
+// x86, IsDebuggerPresent()
 mov eax, DWORD PTR FS:[18h]
 mov eax, DWORD PTR [EAX+30h]
 movzx eax, byte PTR [EAX+2]
@@ -298,7 +298,7 @@ ForceFlags와 Flags에  값이 할당되는 점을 활용하여 안티 디버깅
 
 다음은 ForceFlags의 값이 0이 아닌 경우 탐지를 수행하도록 한 ASM 코드이다.
 
-```pseudocode
+```c++
 mov eax, DWORD PTR FS:[30]
 mov eax, DWORD PTR [eax+18]
 cmp DWORD PTR ds:[eax+40], 0
