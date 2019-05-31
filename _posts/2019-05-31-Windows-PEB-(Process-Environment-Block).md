@@ -231,7 +231,7 @@ typedef struct _LDR_MODULE {
 01154238  53 00 45 00 2e 00 64 00-6c 00 6c 00 00 00 00 00  S.E...d.l.l.....
 ```
 
-다음과 같이 노드의 메모리 값을 확인하면 DLL이 존재하는 것을 확인할 수 있다.
+추가로 baseAddress를 Disasemble하여 호출되는 로직을 확인할 수 있다.
 
 ```powershell
 0:022> u 0x76838390
