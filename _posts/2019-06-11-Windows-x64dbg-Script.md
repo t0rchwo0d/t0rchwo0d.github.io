@@ -23,10 +23,20 @@ tags:
 // Comment : First x64Dbg Script
 // Reference : https://x64dbg.readthedocs.io/en/latest/
 
+msg "[*] t0rchwo0d x64dbg Script"
+
+main:
 $peb = peb()
 log "[+] PEB Address == {0}", $peb
 
 $Peb.begindebuged = 1:[$peb+0x2]
+cmp $Peb.BeginDebuged, 0
+jne BeginDebuged
 log "[+] Peb.begindebuged == {0}", $Peb.begindebuged
+ret
+
+BeginDebuged:
 1:[$peb+0x2] = 0
+log "[+] Modifed Peb.begindebuged == {0}", $Peb.begindebuged
+jmp main
 ```
