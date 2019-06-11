@@ -1,19 +1,19 @@
 ---
-title:  "Windows - x64dbg: Script"
+title:  "Windows - x64dbg Script"
 categories:
   - WINDOWS
 tags:
   - DEBUGGER
   - SCRIPT
 ---
-# x64dbg: Script
+# x64dbg Script
 ## 0x00_Description
-안티 디버깅, 패킹 등을 자동으로 우회하기 위한 x64dbg 스크립트 예제이다. (계속 작성 예정)
+안티 디버깅, 패킹 등을 자동으로 우회하기 위한 x64dbg 스크립트 예제로 x64dbg에서 `[Favourites] > [Script] > [Add]`에서 작성한 스크립트 추가 및 단축키 설정 후, 단축키를 통해 로드하여 "Script" 탭에서 실행이 가능하다. 
+이 때, `[Space]`를 통한 run, `[tap]`을 통한 step 등의 기능을 제공하며 우클릭 항목을 통해 확인이 가능하다.
 
 
 
-## 0x01_Exasmple
-
+## 0x01_Example
 ### Bypassing PEB.begindebuged 
 
 ```php
