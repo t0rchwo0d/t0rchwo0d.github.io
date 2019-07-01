@@ -15,50 +15,37 @@ tags:
 
 ## 0x01_Example
 ### Bypassing PEB.begindebuged 
-- PEB 조작을 통한 방법
-  ```php
-  // Author : t0rchwo0d
-  // Contact : https://t0rchwo0d.github.io
-  // Data : 20190611
-  // Comment : First x64Dbg Script
-  // Reference : https://x64dbg.readthedocs.io/en/latest/
+##### PEB 조작을 통한 방법
+```php
+msg "[*] t0rchwo0d x64dbg Script"
 
-  msg "[*] t0rchwo0d x64dbg Script"
+main:
+$peb = peb()
+log "[+] PEB Address == {0}", $peb
 
-  main:
-  $peb = peb()
-  log "[+] PEB Address == {0}", $peb
+$Peb.begindebuged = 1:[$peb+0x2]
+cmp $Peb.BeginDebuged, 0
+jne BeginDebuged
+log "[+] Peb.begindebuged == {0}", $Peb.begindebuged
+ret
 
-  $Peb.begindebuged = 1:[$peb+0x2]
-  cmp $Peb.BeginDebuged, 0
-  jne BeginDebuged
-  log "[+] Peb.begindebuged == {0}", $Peb.begindebuged
-  ret
+BeginDebuged:
+1:[$peb+0x2] = 0
+log "[+] Modifed Peb.begindebuged == {0}", $Peb.begindebuged
+jmp main
+```
 
-  BeginDebuged:
-  1:[$peb+0x2] = 0
-  log "[+] Modifed Peb.begindebuged == {0}", $Peb.begindebuged
-  jmp main
-  ```
+##### Return Value 조작을 통한 방법
+```php
+msg "[*] t0rchwo0d x64dbg Script"
 
-- Return Value 조작을 통한 방법
-  ```php
-  // Author : t0rchwo0d
-  // Contact : https://t0rchwo0d.github.io
-  // Data : 20190611
-  // Comment : Second x64Dbg Script
-  // Reference : https://x64dbg.readthedocs.io/en/latest/
-  //           : https://x64dbg.readthedocs.io/en/latest/commands/conditional-breakpoint-control/index.html
-
-  msg "[*] t0rchwo0d x64dbg Script"
-
-  main:
-  bp IsDebuggerPresent
-  erun
-  bp [rsp]
-  bc IsDebuggerPresent
-  erun
-  rax = 0
-  erun
-  ret
-  ```
+main:
+bp IsDebuggerPresent
+erun
+bp [rsp]
+bc IsDebuggerPresent
+erun
+rax = 0
+erun
+ret
+```
