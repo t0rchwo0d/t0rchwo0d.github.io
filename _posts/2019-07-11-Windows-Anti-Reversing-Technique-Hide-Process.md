@@ -392,7 +392,7 @@ do {
 } while (pCurrentListEntryNode->Flink 
 ```
 
-이제 Target 프로세스와 `DbgView`를 실행 후, 직접 만든 Loader나 [`OSRLoader`](https://www.osronline.com/article.cfm^article=157.htm)를 이용하여 드라이버를 로드하면 TaskManager 상에서 해당 프로세스가 노출되지 않는 것을 확인할 수 있다. 그러나 이 구조체는 그대로 메모리 상에 존재하고 있으므로 메모리를 덤프하여 `Volatility`를 이용하면 분석이 가능하다.
+이제 Target 프로세스와 `DbgView`를 실행 후, 직접 만든 Loader나 [`OSRLoader`](https://www.osronline.com/article.cfm^article=157.htm)를 이용하여 드라이버를 로드하면 TaskManager 상에서 해당 프로세스가 노출되지 않는 것을 확인할 수 있다. 그러나 이 구조체는 그대로 메모리 상에 존재하고 있으므로 메모리를 덤프하여 `Volatility`를 이용하면 분석이 가능하다. 추가로 Detection 로직은 [이 곳](https://github.com/edix/HiddenProcessDetection)에 잘 작성되어있다.
 
 ## 0x03_PoC (YouTube)
 [![Windows Process Injection Technique - Reflective DLL Injection](http://img.youtube.com/vi/-QHp4HFuj3U/0.jpg)](https://youtu.be/-QHp4HFuj3U?t=0s) 
