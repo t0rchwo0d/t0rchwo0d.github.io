@@ -9,7 +9,7 @@ tags:
 ---
 # Anti-Reversing Technique: Hide Process
 ## 0x00_Description
-별도의 Driver를 로드하는 프로그램 분석을 진행하다 보면 프로세스가 TaskManager에서 탐색되지 않는 경우가 존재한다. 이 기법을 `Process Hiding`이라고도 하는데 정확한 원리 파악을 위해 간략하게 `Driver` 코드를 작성하여 적용한 내용과 함께 필요 지식을 정리하였다.  
+별도의 Driver를 로드하는 프로그램 분석을 진행하다 보면 프로세스가 TaskManager에서 탐색되지 않는 경우가 존재한다. 이 기법을 [DKOM(Direct Kernel Object Manipulation)](https://ko.wikipedia.org/wiki/직접_커널_객체_조작)이라고도 하는데 정확한 원리 파악을 위해 간략하게 `Driver` 코드를 작성하여 적용한 내용과 함께 필요 지식을 정리하였다.  
 
 ## 0x01_EPROCESS Structure
 
