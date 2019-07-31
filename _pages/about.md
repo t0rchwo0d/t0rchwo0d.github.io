@@ -20,8 +20,6 @@ author_profile: true
   - Involved in TenDollar. And I put up a [I hate web - NodeJS](https://github.com/ktb88/2018_TDCTF) Problem at 2018_TDCTF.
 
 ### 2017
-- December
-  - Reported a IoT Vulnerability to [KISA](https://www.krcert.or.kr/consult/software/honorList.do?orgSiteUrl=)
 - September
   - Joined Penetration testing team in a [CYBERONE Company](http://www.cyberone.kr/).
 
