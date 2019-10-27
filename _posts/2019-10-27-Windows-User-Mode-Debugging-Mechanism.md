@@ -5,7 +5,7 @@ categories:
 tags:
   - DEBUG
 ---
-# Windows - User Mode Debugging Mechanism
+# User Mode Debugging Mechanism
 ## 1. Description
 이번 문서에서는 Only 이론적인 부분으로 개인적인 호기심으로 유저 모드 디버깅이 윈도우 OS에서 어떤 구성을 가지는지 궁금해서 정리하였다. 그런데 이 부분은 이해가 어려워 보고 또 보고 다시 정리해봐야 할 듯...
 
