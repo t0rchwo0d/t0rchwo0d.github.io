@@ -16,7 +16,7 @@ tags:
 ## 2. 커널 지원 (Executive)
 `Executive`는 윈도우 커널 영역의 관리 시스템으로 설명보다 다음 그림을 보는 것이 이해가 더 쉽다. 이 Executive 내부에 dbgk(디버깅 프레임워크)가 존재하는데 디버그 이벤트 등록, 리스닝, 객체 관리, 유저 모드와 통신하기 위한 디버깅 정보 정리 등의 역할을 수행한다. 그러니까 심플하게 OS 관리 영역이다. (이 부분은 커널 드라이버를 이용한 안티 디버깅 영역에서 다시 한번 만날 것 같은 느낌적인 느낌이다…)
 
-![2019-10-27-Windows-User-Mode-Debugging-Mechanism_001](./assets/images/2019-10-27-Windows-User-Mode-Debugging-Mechanism_001.png)
+![2019-10-27-Windows-User-Mode-Debugging-Mechanism_001](https://t0rchwo0d.github.io//assets/images/2019-10-27-Windows-User-Mode-Debugging-Mechanism_001.png)
 
 
 
