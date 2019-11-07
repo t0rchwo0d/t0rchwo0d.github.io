@@ -1,5 +1,5 @@
 ---
-title:  "Windows - Anti-Debugging Technique: GetThreadContext()"
+title:  "Windows - Anti-Reversing Technique: GetThreadContext()"
 categories:
   - WINDOWS
 tags:
