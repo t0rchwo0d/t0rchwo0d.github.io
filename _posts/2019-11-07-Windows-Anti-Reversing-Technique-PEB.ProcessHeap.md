@@ -98,7 +98,7 @@ Index   Address  Name      Debugging options enabled
 
 이전에 얘기했던 `MASM`으로 이 기법을 이용한 탐지 로직을 구현해 보았다. (구현에만 초점을 맞춰 ASM 코드를 작성하다 보니 아래와 같이 `RAX` 레지스터만 주로 사용하는 코드가 되었다…) 참고로, `NtGlobalFlag`와 동일하게 디버깅 시에 세팅되는 값으로 탐지를 우회하고 디버깅을 하고 싶으면 실행하고 붙이는 방법도 있다.
 
-```c
+```c++
 /* flag.asm */
 .code
 HeapFlagCheck proc
@@ -128,9 +128,7 @@ HeapFlagCheck proc
     ret
 HeapFlagCheck endp
 end
-```
 
-```c
 /* main.cpp */
 #include "pch.h"
 #include <iostream>
