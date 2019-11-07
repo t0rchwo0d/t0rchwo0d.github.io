@@ -62,10 +62,13 @@ Index   Address  Name      Debugging options enabled
 ```
 
 `Flags`와 `ForceFlags` 이 두 값은 `NtGlobalFlag`에 <u>Set</u>되는 `Flag` 정보를 참조하여 디버거에서 실행 시, 특정 `Flag`가 Set된다.
-
+>
 > HEAP_TAIL_CHECKING_ENABLED  (0x20) == FLG_HEAP_ENABLE_TAIL_CHECK
+>
 > HEAP_FREE_CHECKING_ENABLED  (0x40) == FLG_HEAP_ENABLE_FREE_CHECK
+>
 > HEAP_VALIDATE_PARAMETERS_ENABLED  (0x40000000) == FLG_HEAP_VALIDATE_PARAMETERS
+>
 
 "Windows Internals 5th"에서는 이 3개의 플래그는 디버거에서 프로세스를 실행 할 때, 로더로 인하여 자동으로 활성화 되는 값이며 이 디버깅 옵션 값들은 다음과 같은 기능을 수행한다고 명세되어 있다. (예전 책이라 윈도우 10은 다를 수 있다…)
 
